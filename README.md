@@ -116,13 +116,9 @@ MIT License
 
 ### Autor
 
-Alex (y ChatGPT)  
+slider66
+
 Basado en guías de [Softzone](https://www.softzone.es/windows/como-se-hace/usar-menu-contextual-clasico-windows-11/)
 
 ---
-
-## Captura de pantalla sugerida
-
-![Captura de ejemplo](https://i.imgur.com/DnKXrkq.png)
-*(Puedes hacer una captura de la consola mostrando el menú de selección para añadirla aquí)*
 
