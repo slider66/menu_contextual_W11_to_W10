@@ -118,7 +118,7 @@ MIT License
 
 slider66
 
-Basado en guías de [Softzone](https://www.softzone.es/windows/como-se-hace/usar-menu-contextual-clasico-windows-11/)
+Basado en guías de Softzone
 
 ---
 
