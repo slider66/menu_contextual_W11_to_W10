@@ -1,55 +1,53 @@
-# Cambia el Menú Contextual Clásico en Windows 11 / Change to Classic Context Menu in Windows 11
+# Fix Menú Contextual Windows 11 / Restore Classic Context Menu (W10 style)
 
 [Versión en español abajo / Spanish version below]
 
 ## ENGLISH
 
-**This Python script lets you quickly enable the classic (Windows 10 style) right-click context menu in Windows 11, restore the modern menu, or do nothing (exit).**  
-It automates the required Windows registry changes and restarts Explorer for you.
+**Restore the classic Windows 10 right-click menu in Windows 11 with a single click.**
+This tool fixes the annoyance of the "Show more options" menu by enabling the classic full context menu permanently.
+
+### 🚀 Download / Descarga
+
+**[Download the latest executable (v1.0.0)](https://github.com/your-user/menu-contextual-windows11/releases/latest)**
+_(No installation required. Just download and run)_
+
+> [!IMPORTANT] > **Antivirus Warning:** Since this is a new, unsigned executable that modifies the system registry, some antivirus software (like Windows Defender) might flag it as suspicious. This is a false positive. You can review the open-source code below to verify its safety.
 
 ### Features
-- Activate the classic context menu with one click.
-- Restore the Windows 11 default modern context menu.
-- Only basic Python knowledge needed: just run, choose and go.
-- Explorer restarts automatically to apply changes.
-- Asks for administrator privileges if not launched as admin.
 
-### Requirements
-- Windows 11
-- Python 3.x installed
-- Administrator privileges
+- **Instant Fix:** Switch between Classic (W10) and Modern (W11) menus instantly.
+- **No Dependencies:** The `.exe` works on any Windows 11 PC without installing Python.
+- **Automatic:** Restarts Windows Explorer automatically to apply changes.
+- **Safe:** You can revert to the default Windows 11 menu at any time.
 
-### How to Use
+### Screenshots
 
-1. **Download or clone the repository:**
-    ```bash
-    git clone https://github.com/your-user/menu-contextual-windows11.git
-    cd menu-contextual-windows11
-    ```
-2. **Run the script as administrator:**
-    ```bash
-    python menu_contextual.py
-    ```
-    If not started as admin, the script will prompt for it automatically.
+|                         Before (Modern W11)                          |                          After (Classic W10)                           |
+| :------------------------------------------------------------------: | :--------------------------------------------------------------------: |
+| ![Modern Menu](https://via.placeholder.com/300x400?text=Modern+Menu) | ![Classic Menu](https://via.placeholder.com/300x400?text=Classic+Menu) |
 
-3. **Choose the desired option:**
-    - `1` → Enable classic context menu (Windows 10 style)
-    - `2` → Restore default modern context menu (Windows 11)
-    - `3` → Do nothing and exit
+### How it works (Transparency)
 
-4. **Explorer will restart** to apply changes.
+The tool modifies a specific registry key to override the new menu style.
+**Registry Key Modified:**
+`HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32`
 
-### How it works
+- **Enable Classic:** Creates this key with an empty default value.
+- **Restore Modern:** Deletes this key.
 
-The script adds or removes this registry key:
+### How to Use (Source Code)
 
-HKEY_CURRENT_USER\Software\Classes\CLSID{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32
+If you prefer running the Python script instead of the executable:
 
-
-- **Classic menu:** Key present, default value empty
-- **Modern menu:** Key removed
-
-> **Warning:** Changing the Windows registry can affect system configuration. Use responsibly.
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/your-user/menu-contextual-windows11.git
+   ```
+2. **Run:**
+   ```bash
+   python menu_contextual.py
+   ```
 
 ### License
 
@@ -59,66 +57,51 @@ MIT License
 
 ## ESPAÑOL
 
-**Este script en Python permite activar el menú contextual clásico (estilo Windows 10) en Windows 11, restaurar el menú moderno, o salir sin hacer cambios.**  
-Automatiza los cambios en el registro y reinicia el Explorador automáticamente.
+**Restaura el menú contextual clásico de Windows 10 en Windows 11 con un solo clic.**
+Esta herramienta soluciona la molestia de tener que hacer clic en "Mostrar más opciones", activando el menú completo de siempre.
+
+### 🚀 Descarga
+
+**[Descargar el ejecutable (v1.0.0)](https://github.com/your-user/menu-contextual-windows11/releases/latest)**
+_(No requiere instalación. Solo descargar y ejecutar)_
+
+> [!IMPORTANT] > **Aviso de Antivirus:** Al ser un ejecutable nuevo y sin firmar que modifica el registro, algunos antivirus pueden marcarlo como sospechoso. Es un falso positivo. Puedes revisar el código fuente abierto para verificar su seguridad.
 
 ### Características
 
-- Activa el menú contextual clásico con un solo clic.
-- Restaura el menú contextual moderno por defecto de Windows 11.
-- Solo necesitas Python: ejecuta, elige y listo.
-- Reinicia el Explorador de Windows automáticamente.
-- Solicita permisos de administrador si no los tiene.
+- **Solución Rápida:** Cambia entre el menú Clásico (W10) y Moderno (W11) al instante.
+- **Sin Dependencias:** El `.exe` funciona en cualquier PC sin necesidad de Python.
+- **Automático:** Reinicia el Explorador de Windows para aplicar los cambios.
+- **Seguro:** Puedes volver al menú original de Windows 11 cuando quieras.
 
-### Requisitos
+### Capturas de Pantalla
 
-- Windows 11
-- Python 3.x instalado
-- Permisos de administrador
+|                          Antes (Moderno W11)                           |                         Después (Clásico W10)                          |
+| :--------------------------------------------------------------------: | :--------------------------------------------------------------------: |
+| ![Menú Moderno](https://via.placeholder.com/300x400?text=Menu+Moderno) | ![Menú Clásico](https://via.placeholder.com/300x400?text=Menu+Clasico) |
 
-### Uso
+### Transparencia (Qué hace exactamente)
 
-1. **Descarga o clona este repositorio:**
-    ```bash
-    git clone https://github.com/tu-usuario/menu-contextual-windows11.git
-    cd menu-contextual-windows11
-    ```
-2. **Ejecuta el script como administrador:**
-    ```bash
-    python menu_contextual.py
-    ```
-    Si no tienes permisos de admin, el propio script lo pedirá automáticamente.
+El script modifica una clave de registro específica para anular el estilo nuevo.
+**Clave del Registro:**
+`HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32`
 
-3. **Elige la opción deseada:**
-    - `1` → Activar menú contextual clásico (estilo Windows 10)
-    - `2` → Restaurar menú contextual moderno (Windows 11)
-    - `3` → No hacer nada y salir
+- **Activar Clásico:** Crea esta clave con un valor vacío.
+- **Restaurar Moderno:** Elimina esta clave.
 
-4. **El Explorador de Windows se reiniciará** para aplicar los cambios.
+### Uso (Código Fuente)
 
-### ¿Cómo funciona?
+Si prefieres usar el script de Python:
 
-El script añade o elimina la siguiente clave de registro:
-
-HKEY_CURRENT_USER\Software\Classes\CLSID{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32
-
-
-- **Menú clásico:** Clave presente, valor predeterminado vacío
-- **Menú moderno:** Clave eliminada
-
-> **Nota:** Modificar el registro puede afectar a la configuración del sistema. Úsalo bajo tu responsabilidad.
-
-### Licencia
-
-MIT License
-
----
+1. **Clonar:**
+   ```bash
+   git clone https://github.com/tu-usuario/menu-contextual-windows11.git
+   ```
+2. **Ejecutar:**
+   ```bash
+   python menu_contextual.py
+   ```
 
 ### Autor
 
-slider66
-
-Basado en guías de Softzone
-
----
-
+slider66 | Basado en guías de Softzone
