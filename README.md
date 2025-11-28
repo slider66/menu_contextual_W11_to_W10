@@ -1,4 +1,4 @@
-# Fix Menú Contextual Windows 11 / Restore Classic Context Menu (W10 style)
+# Windows 11 Classic Context Menu (win11-classic-context-menu)
 
 [Versión en español abajo / Spanish version below]
 
@@ -9,7 +9,7 @@ This tool fixes the annoyance of the "Show more options" menu by enabling the cl
 
 ### 🚀 Download / Descarga
 
-**[Download the latest executable (v1.0.0)](https://github.com/your-user/menu-contextual-windows11/releases/latest)**
+**[Download the latest executable (v1.0.0)](https://github.com/your-user/win11-classic-context-menu/releases/latest)**
 _(No installation required. Just download and run)_
 
 > [!IMPORTANT] > **Antivirus Warning:** Since this is a new, unsigned executable that modifies the system registry, some antivirus software (like Windows Defender) might flag it as suspicious. This is a false positive. You can review the open-source code below to verify its safety.
@@ -42,7 +42,7 @@ If you prefer running the Python script instead of the executable:
 
 1. **Clone the repo:**
    ```bash
-   git clone https://github.com/your-user/menu-contextual-windows11.git
+   git clone https://github.com/your-user/win11-classic-context-menu.git
    ```
 2. **Run:**
    ```bash
@@ -62,7 +62,7 @@ Esta herramienta soluciona la molestia de tener que hacer clic en "Mostrar más 
 
 ### 🚀 Descarga
 
-**[Descargar el ejecutable (v1.0.0)](https://github.com/your-user/menu-contextual-windows11/releases/latest)**
+**[Descargar el ejecutable (v1.0.0)](https://github.com/your-user/win11-classic-context-menu/releases/latest)**
 _(No requiere instalación. Solo descargar y ejecutar)_
 
 > [!IMPORTANT] > **Aviso de Antivirus:** Al ser un ejecutable nuevo y sin firmar que modifica el registro, algunos antivirus pueden marcarlo como sospechoso. Es un falso positivo. Puedes revisar el código fuente abierto para verificar su seguridad.
@@ -95,7 +95,7 @@ Si prefieres usar el script de Python:
 
 1. **Clonar:**
    ```bash
-   git clone https://github.com/tu-usuario/menu-contextual-windows11.git
+   git clone https://github.com/tu-usuario/win11-classic-context-menu.git
    ```
 2. **Ejecutar:**
    ```bash
